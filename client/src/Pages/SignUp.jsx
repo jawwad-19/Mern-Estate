@@ -66,7 +66,7 @@ console.log(data);
       </form>
       <div className="flex gap-2 mt-2">
         <p>Have an account?</p>
-        <Link to="/login" className="text-blue-500 hover:underline">
+        <Link to="/sign-in" className="text-blue-500 hover:underline">
           Login here
         </Link>
       </div>
