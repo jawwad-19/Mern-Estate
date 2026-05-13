@@ -18,7 +18,7 @@ const res= await fetch('/api/auth/google', {
   method: 'POST',
   headers:
   {'Content-Type': 'application/json'},
-  body: JSON.stringify({name: result.user.displayName,email: result.user.email,img: result.user.photoURL, })
+  body: JSON.stringify({name: result.user.displayName,email: result.user.email, img:result.user.photoURL})
 });
   const data = await res.json(); 
   dispatch(signInSuccess(data)); 
