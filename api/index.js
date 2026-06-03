@@ -9,7 +9,7 @@ import path from 'path';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO)
+  .connect("mongodb://jawwad:jawwad@ac-33hx18k-shard-00-00.id8fqec.mongodb.net:27017,ac-33hx18k-shard-00-01.id8fqec.mongodb.net:27017,ac-33hx18k-shard-00-02.id8fqec.mongodb.net:27017/?ssl=true&replicaSet=atlas-ew5u8r-shard-0&authSource=admin&appName=realestate")
   .then(() => {
     console.log('Connected to MongoDB!');
   })
