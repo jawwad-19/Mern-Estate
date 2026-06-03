@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import bcryptjs from 'bcryptjs';
 import User from '../models/user.model.js';
 import { errorHandler } from '../utils/error.js';
@@ -76,4 +77,9 @@ export const getUser = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+=======
+export const test=(req,res)=>{
+  
+    res.json({message:'API routes are working!!'});
+>>>>>>> 9fd1453f029e3449823ac9ad09b238362e52676e
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FaSearch } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -22,10 +23,18 @@ export default function Header() {
       setSearchTerm(searchTermFromUrl);
     }
   }, [location.search]);
+=======
+import {FaSearch} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
+export default function Header() {
+  const {currentUser} = useSelector((state) => state.user)  
+>>>>>>> 9fd1453f029e3449823ac9ad09b238362e52676e
   return (
     <header className='bg-slate-200 shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link to='/'>
+<<<<<<< HEAD
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
             <span className='text-slate-500'>Roofly</span>
             <span className='text-slate-700'>Estate</span>
@@ -72,4 +81,40 @@ export default function Header() {
       </div>
     </header>
   );
+=======
+<h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
+  <span className='text-slate-400'>Khokar</span>
+  <span className='text-slate-800'>Estate</span>
+</h1>
+</Link>
+<form className='bg-slate-100 p-3 rounded-lg flex items-center'>
+  <input type="text" placeholder="Search..." className='bg-transparent focus:outline-none w-24 sm:w-64'/>
+  <FaSearch className='text-slate-800'/>
+</form>
+<ul className='flex gap-4'>
+  <Link to='/'>
+  <li className='hidden sm:inline text-slate-900 hover:underline'>Home</li>
+  </Link>
+    <Link to='About'>
+  <li className='hidden sm:inline text-slate-900 hover:underline'>About</li>
+  </Link>
+ {currentUser ? (
+  <Link to='/profile'>
+    <img 
+      className='rounded-full h-7 w-7 object-cover' 
+      src={currentUser.avatar} 
+      alt="Profile" 
+    />
+  </Link>
+) : (
+  <Link to='/sign-in'>
+    <li className='hidden sm:inline text-slate-900 hover:underline'>Sign In</li>
+  </Link>
+)}
+</ul>
+      </div>
+
+    </header>
+  )
+>>>>>>> 9fd1453f029e3449823ac9ad09b238362e52676e
 }
